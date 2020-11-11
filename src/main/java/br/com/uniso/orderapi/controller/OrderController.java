@@ -30,7 +30,7 @@ public class OrderController {
         Order order = new Order();
         order.setAmount(BigDecimal.ZERO);
         ids.forEach(id -> {
-            Product response = restTemplate.getForObject("https://catalog-api-marco.herokuapp.com/catalog/" + id, Product.class);
+            Product response = restTemplate.getForObject("https://catalog-api/catalog/" + id, Product.class);
             products.add(response);
             order.setAmount(order.getAmount().add(response.getAmount()));
         });
