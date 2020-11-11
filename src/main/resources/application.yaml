@@ -1,0 +1,18 @@
+spring:
+  jpa:
+    properties:
+      hibernate:
+        showSql: true
+  application:
+    name: order-api
+
+server:
+  port: 8081
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: https://eureka-server-marco.herokuapp.com/eureka/
+  instance:
+    hostname: eureka-server-marco.herokuapp.com
+    nonSecurePort: 80
